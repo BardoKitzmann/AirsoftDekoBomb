@@ -1,0 +1,37 @@
+Ich übernehme keinerlei Haftung!! 
+
+________________________________________________________________________________________
+
+Wenn ihr das Projekt cool findet spendet mir gerne einen Kaffee: paypal.me/BardoKitzmann
+_________________________________________________________________________________________
+
+
+
+
+Diese Teile/Geräte benötigt ihr: Kosten ca. 30 Euro
+
+ESP32: https://www.amazon.de/AZDelivery-ESP32-NodeMCU-gratis-eBook/dp/B07Z83MF5W/ref=sr_1_5?keywords=esp32&qid=1643144310&sr=8-5&th=1
+Relais: https://www.amazon.de/gp/product/B07BVXT1ZK/ref=ppx_yo_dt_b_asin_image_o03_s00?ie=UTF8&psc=1
+4 Bit Digital Tube LED 7-Segment Display Modul: https://www.amazon.de/gp/product/B06X952QXS/ref=ppx_yo_dt_b_asin_image_o05_s00?ie=UTF8&th=1
+Elektronische Summer: https://www.amazon.de/gp/product/B07MJ6ZRLB/ref=ppx_yo_dt_b_asin_image_o05_s00?ie=UTF8&psc=1
+Kabel: https://www.amazon.de/gp/product/B07KYHBVR7/ref=ppx_yo_dt_b_asin_image_o04_s00?ie=UTF8&th=1
+Powerbank mit einen Durchmesser von maximal 2,7 cm: https://www.amazon.de/gp/product/B099S1PH26/ref=ppx_yo_dt_b_asin_image_o02_s00?ie=UTF8&psc=1
+Löhtkobel und Löhtzing 
+Schraubenzieher und Abisolierzange
+Eventuell einen 3D Drucker
+
+
+1. AirsoftBombe.ino mit den Programm Arduino IDE (https://www.arduino.cc/en/software) auf den ESP32 laden. Das Programm muss davor aber vorbereitet werden in diesen Video
+   wird beschrieben wie: https://www.youtube.com/watch?v=mBaS3YnqDaU&t=2s (wenn es das Video nicht mehr gibt dann einfach "Install the ESP32 Board in Arduino IDE" suchen).
+   Danach müsst ihr noch diese Bibliothek einbinden für das Display Modul: https://www.arduino.cc/reference/en/libraries/grove-4-digit-display/ (Die Biblothek könnt ihr auch
+   im Programm suchen).
+
+2. Nach dem ihr das Program auf den ESP32 geladen habt. Könnt ihr die Kabel an die Pins machen. Pin Vebindungen: G4-->G22     G16-->G23     G17-->G21     G18-->G19 
+   Dann kommt ein Kabel G23 zum Relaieingang S und ein 3,3v zum + und ein GND zum -
+   Auf die andere Seite des Relais kommt auf IN das Kabel vom GND der Powerbank. Auf NO kommt das Minus von den Summer/Buzzer.
+   Das Display bekommt genauso 5v auf VCC und GND auf GND vom ESP. CLK würd mit G25 verbunden und DIO mit G26 verbunden.
+   Jetzt würd noch von der Powerbank 5v an den Esp Pin 5v geklemmt und so auch noch der GND.
+
+3. Danach kann die Powerbank angeschlossen werden und es funktioniert. 
+
+4. Wenn es funktioniert, kann man noch die Hülle drucken, die ich als STL Datei hinzugefügt habe.
